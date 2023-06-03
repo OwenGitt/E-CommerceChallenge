@@ -24,11 +24,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   dragList.addEventListener("mousemove", (event) => {
     event.preventDefault();
-    if (!mouseDown || draggingList) {
+    if (!mouseDown || !draggingList) {
       return;
     }
     const newPosition = event.pageX - dragList.offsetLeft;
-    const moveList = newPosition - startingPosition;
+    const moveList = (newPosition - startingPosition) * 1.5;
     dragList.scrollLeft = scrollDistance - moveList;
   });
 });
