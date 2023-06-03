@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   dragList.addEventListener("mousedown", (event) => {
     startingPosition = event.pageX;
-    scrollDistance = slider.scrollLeft;
+    scrollDistance = dragList.scrollDistance;
     mouseDown = true;
     draggingList = true;
   });
@@ -20,6 +20,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   dragList.addEventListener("mousemove", (event) => {
     const newPosition = event.pageX - dragList.offsetLeft;
     const moveList = newPosition - startingPosition;
-    dragList.scrollLeft = scrollLeft - moveList;
+    dragList.scrollDistance = scrollDistance - moveList;
   });
 });
