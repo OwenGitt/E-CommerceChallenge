@@ -17,9 +17,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     draggingList = false;
   });
 
+  dragList.addEventListener("mouseleave", (event) => {
+    mouseDown = false;
+    draggingList = false;
+  });
+
   dragList.addEventListener("mousemove", (event) => {
     event.preventDefault();
-    if (!mouseDown) {
+    if (!mouseDown || draggingList) {
       return;
     }
     const newPosition = event.pageX - dragList.offsetLeft;
