@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   dragList.addEventListener("mousedown", (event) => {
     startingPosition = event.pageX;
-    scrollDistance = dragList.scrollDistance;
+    scrollDistance = dragList.scrollLeft;
     mouseDown = true;
     draggingList = true;
   });
@@ -18,8 +18,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   dragList.addEventListener("mousemove", (event) => {
+    event.preventDefault();
+    if (!mouseDown) {
+      return;
+    }
     const newPosition = event.pageX - dragList.offsetLeft;
     const moveList = newPosition - startingPosition;
-    dragList.scrollDistance = scrollDistance - moveList;
+    dragList.scrollLeft = scrollDistance - moveList;
   });
 });
