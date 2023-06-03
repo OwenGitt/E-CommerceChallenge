@@ -3,28 +3,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
   var startingPosition;
   var scrollDistance;
   var mouseDown = false;
-  var draggingList = false;
 
   dragList.addEventListener("mousedown", (event) => {
     startingPosition = event.pageX;
     scrollDistance = dragList.scrollLeft;
     mouseDown = true;
-    draggingList = true;
   });
 
   dragList.addEventListener("mouseup", (event) => {
     mouseDown = false;
-    draggingList = false;
   });
 
   dragList.addEventListener("mouseleave", (event) => {
     mouseDown = false;
-    draggingList = false;
   });
 
   dragList.addEventListener("mousemove", (event) => {
     event.preventDefault();
-    if (!mouseDown || !draggingList) {
+    if (!mouseDown) {
       return;
     }
     const newPosition = event.pageX - dragList.offsetLeft;
