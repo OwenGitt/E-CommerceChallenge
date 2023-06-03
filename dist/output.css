@@ -522,6 +522,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 .ml-12 {
   margin-left: 3rem;
 }
@@ -656,4 +664,8 @@ video {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.focus\:pointer-events-auto:focus {
+  pointer-events: auto;
 }
