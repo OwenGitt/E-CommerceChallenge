@@ -2,20 +2,22 @@
   margin-left: 375px;
   margin-top: 475px;
   z-index: 10;
-  position: absolute;
+  position: fixed;
   border-radius: 50%;
   justify-content: center;
+  padding: 0.25%;
+  overflow-x: hidden;
 }
+
 .arrow {
-  visibility: hidden;
-  position: absolute;
+  opacity: 0;
+  transition: opacity 1000ms;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #placeholder:hover .arrow {
-  visibility: visible;
-}
-
-#placeholder:hover .arrowContainer {
-  visibility: visible;
-  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: relative;
+  overflow-x: hidden;
 }
