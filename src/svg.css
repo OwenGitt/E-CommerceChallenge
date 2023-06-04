@@ -1,3 +1,11 @@
+.arrowContainer {
+  margin-left: 375px;
+  margin-top: 475px;
+  z-index: 10;
+  position: absolute;
+  border-radius: 50%;
+  justify-content: center;
+}
 .arrow {
   visibility: hidden;
   position: absolute;
@@ -5,4 +13,9 @@
 
 #placeholder:hover .arrow {
   visibility: visible;
+}
+
+#placeholder:hover .arrowContainer {
+  visibility: visible;
+  background-color: rgb(255, 255, 255);
 }

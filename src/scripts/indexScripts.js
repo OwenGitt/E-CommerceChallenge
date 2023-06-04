@@ -27,11 +27,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const moveList = (newPosition - startingPosition) * 1.5;
     dragList.scrollLeft = scrollDistance - moveList;
   });
-
-  const dragListItems = dragList.getElementsByTagName("img");
-  for (let i = 0; i < dragListItems.length; i++) {
-    dragListItems[i].addEventListener("mouseenter", (event) => {});
-    var position = dragListItems[i].getBoundingClientRect();
-    console.log(position.left);
-  }
 });
