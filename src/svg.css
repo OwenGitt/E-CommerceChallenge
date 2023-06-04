@@ -1,0 +1,8 @@
+.arrow {
+  visibility: hidden;
+  position: absolute;
+}
+
+#placeholder:hover .arrow {
+  visibility: visible;
+}

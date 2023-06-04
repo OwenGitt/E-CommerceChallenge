@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" type="text/css" />
+    <link href="./svg.css" rel="stylesheet" type="text/css" />
     <script src="scripts/indexScripts.js"></script>
   </head>
   <body>
@@ -11,8 +12,14 @@
         <h1 class="text-4xl font-sans font-bold mb-6">Section Title</h1>
         <div class="flex flex-row overflow-x-hidden " id="listToBeDragged">
             
-            <div class="flex flex-col flex-shrink-0 mr-5">
-                <img class="w-auto h-auto hover:scale-105 hover:cursor-pointer  ease-in-out duration-500" src="./images/Placeholder_Image.png"></img>
+            <div class="flex flex-col flex-shrink-0 mr-5" id="placeholder">
+                <div>
+                    <img class="w-auto h-auto hover:scale-105 hover:cursor-pointer ease-in-out duration-500 group " src="./images/Placeholder_Image.png"></img>
+                
+                    <svg  xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" viewBox="0 0 10.293 9.794">
+                        <path id="Arrow" d="M4.865.53,9.232,4.9,4.865,9.263M9,4.9H0" transform="translate(0 0)" fill="none" stroke="#1f1f1e" stroke-width="1.5"  class="arrow"/>
+                        </svg>
+                </div>
                 <div class=" text-base mt-6 text-2xl"> Title</div>
             </div>
             <div class="flex flex-col flex-shrink-0 mr-5">
@@ -41,6 +48,7 @@
             </div>
             <div class="flex flex-col flex-shrink-0 mr-5">
                 <img class="w-auto h-auto hover:scale-105 ease-in-out hover:cursor-pointer duration-500" src="./images/Placeholder_Image.png"></img>
+               
                 <div class=" text-base mt-6 text-2xl"> Title</div>
             </div>
             
