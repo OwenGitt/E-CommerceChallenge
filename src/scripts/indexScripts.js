@@ -1,16 +1,19 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+  //Get the list of "cards" and create variables to be used.
   const dragList = document.getElementById("listToBeDragged");
   var startingPosition;
   var scrollDistance;
   var mouseDown = false;
   var beenDragged = false;
 
+  //When mouse is pressed down get starting position and how far has been scrolled, setting mouseDown to true.
   dragList.addEventListener("mousedown", (event) => {
     startingPosition = event.pageX;
     scrollDistance = dragList.scrollLeft;
     mouseDown = true;
   });
 
+  //Change mouseDown state to false, and if the user has dragged the page stop the link of any "card" from being activated.
   dragList.addEventListener("mouseup", (event) => {
     mouseDown = false;
     if (beenDragged === true) {
@@ -18,10 +21,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 
+  //When the mouse leaves the area change the mouseDown state to false.
   dragList.addEventListener("mouseleave", (event) => {
     mouseDown = false;
   });
 
+  //On mouse move prevent default and if the mouse is still down then return otherwise update the position.
   dragList.addEventListener("mousemove", (event) => {
     event.preventDefault();
     if (mouseDown === false) {
@@ -34,12 +39,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   });
 
-  //
+  //Allow users to scroll horizontally across the dragList.
   window.addEventListener("wheel", function (event) {
     if (event.deltaY > 0) dragList.scrollLeft += 100;
     else dragList.scrollLeft -= 100;
   });
 
+  //Create 10 of the same "cards" inside of the dragList.
   for (let totalCards = 0; totalCards < 10; totalCards++) {
     dragList.insertAdjacentHTML(
       "beforeend",
