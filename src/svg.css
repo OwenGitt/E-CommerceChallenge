@@ -2,11 +2,9 @@
   opacity: 0;
   transition: opacity 1000ms;
   position: relative;
-  overflow-x: hidden;
 }
 
 #placeholder:hover .arrow {
   opacity: 1;
   position: relative;
-  overflow-x: hidden;
 }
