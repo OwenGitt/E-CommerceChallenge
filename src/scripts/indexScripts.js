@@ -27,4 +27,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const moveList = (newPosition - startingPosition) * 1.5;
     dragList.scrollLeft = scrollDistance - moveList;
   });
+
+  //
+  window.addEventListener("wheel", function (event) {
+    if (event.deltaY > 0) dragList.scrollLeft += 100;
+    else dragList.scrollLeft -= 100;
+  });
 });
