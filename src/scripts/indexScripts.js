@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       "beforeend",
       "<div class='flex flex-col flex-shrink-0 mr-5 group relative'  id='placeholder'>" +
         "<a href='https://github.com/OwenGitt/VentureStreamChallenge'>" +
-        "<img class='w-[237px] h-[290px] sm:w-[396px] sm:h-[485px]  hover:scale-105 hover:cursor-pointer ease-in-out duration-500 relative' src='./images/Placeholder_Image.png'></img>" +
+        "<img class='w-[237px] h-[290px] min-[394px]:w-[322px] min-[394px]:h-[429px] min-[600px]:w-[396px] min-[600px]:h-[485px]  hover:scale-105 hover:cursor-pointer ease-in-out duration-500 relative' src='./images/Placeholder_Image.png'></img>" +
         " <div class='z-10 rounded-full absolute bg-white p-1 invisible group-hover:visible overflow-x-hidden bottom-24 right-12'>   " +
         "<svg  xmlns='http://www.w3.org/2000/svg' class='w-4 h-4' viewBox='0 0 10.293 9.794' >" +
         "<path id='Arrow' d='M4.865.53,9.232,4.9,4.865,9.263M9,4.9H0' transform='translate(0 0)' fill='none' stroke='#1f1f1e' stroke-width='1.5'  class='arrow' />" +

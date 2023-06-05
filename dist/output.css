@@ -701,6 +701,46 @@ video {
   visibility: visible;
 }
 
+@media (min-width: 394px) {
+  .min-\[394px\]\:h-\[485px\] {
+    height: 485px;
+  }
+
+  .min-\[394px\]\:h-\[459px\] {
+    height: 459px;
+  }
+
+  .min-\[394px\]\:h-\[429px\] {
+    height: 429px;
+  }
+
+  .min-\[394px\]\:w-\[396px\] {
+    width: 396px;
+  }
+
+  .min-\[394px\]\:w-\[302px\] {
+    width: 302px;
+  }
+
+  .min-\[394px\]\:w-\[312px\] {
+    width: 312px;
+  }
+
+  .min-\[394px\]\:w-\[322px\] {
+    width: 322px;
+  }
+}
+
+@media (min-width: 600px) {
+  .min-\[600px\]\:h-\[485px\] {
+    height: 485px;
+  }
+
+  .min-\[600px\]\:w-\[396px\] {
+    width: 396px;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:h-\[485px\] {
     height: 485px;
