@@ -19,11 +19,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     if (beenDragged === true) {
       event.preventDefault();
     }
+    beenDragged = false;
   });
 
   //When the mouse leaves the area change the mouseDown state to false.
   dragList.addEventListener("mouseleave", (event) => {
     mouseDown = false;
+    beenDragged = false;
   });
 
   //On mouse move prevent default and if the mouse is still down then return otherwise update the position.
