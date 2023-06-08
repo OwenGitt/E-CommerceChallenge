@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   //Change mouseDown state to false, and if the user has dragged the page stop the link of any "card" from being activated.
   dragList.addEventListener("mouseup", (event) => {
+    event.stopPropagation();
     mouseDown = false;
     if (beenDragged === true) {
       event.preventDefault();
